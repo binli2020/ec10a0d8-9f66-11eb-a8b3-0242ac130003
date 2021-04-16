@@ -66,3 +66,5 @@ def test_case11():
     expect_result = [1, 5, 9]
     assert expect_result == long_subseq.long_subseq(integers)
 
+def test_invalid_input():
+    assert None == long_subseq.long_subseq('a_string')

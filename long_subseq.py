@@ -3,7 +3,12 @@ def long_subseq(integers : str) -> list:
     if not i_list:
         return None
 
-    integer_list = [int(i) for i in i_list]
+    try:
+        integer_list = [int(i) for i in i_list]
+    except ValueError as ex:
+        print (str(ex))
+        return None
+
     max_len = 1
     result = [integer_list[0]]
     ptr1 = 0
