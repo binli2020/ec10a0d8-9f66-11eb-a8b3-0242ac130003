@@ -1,4 +1,4 @@
-def long_subseq(integers : str) -> list:
+def long_subseq(integers: str) -> list:
     i_list = integers.split()
     if not i_list:
         return None
@@ -6,7 +6,7 @@ def long_subseq(integers : str) -> list:
     try:
         integer_list = [int(i) for i in i_list]
     except ValueError as ex:
-        print (str(ex))
+        print(str(ex))
         return None
 
     max_len = 1
@@ -33,10 +33,11 @@ def long_subseq(integers : str) -> list:
 
     return result
 
+
 if __name__ == "__main__":
     while True:
         integers = input("Enter a list of integers(enter or type exit to exit): ")
         if not integers or integers.lower() == 'exit':
             break
 
-        print (long_subseq(integers))
+        print(long_subseq(integers))

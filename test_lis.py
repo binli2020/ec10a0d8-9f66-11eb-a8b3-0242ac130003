@@ -1,6 +1,5 @@
-import pytest
-
 import long_subseq
+
 
 def test_case1():
     integers = '6 1 5 9 2'
@@ -61,10 +60,12 @@ def test_case10():
     expect_result = [2, 4, 6]
     assert expect_result == long_subseq.long_subseq(integers)
 
+
 def test_case11():
     integers = '6 2 4 3 1 5 9'
     expect_result = [1, 5, 9]
     assert expect_result == long_subseq.long_subseq(integers)
 
+
 def test_invalid_input():
-    assert None == long_subseq.long_subseq('a_string')
+    assert long_subseq.long_subseq('a_string') is None
